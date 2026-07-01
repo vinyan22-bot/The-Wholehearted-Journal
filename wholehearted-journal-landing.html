@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wholehearted Journal — A Complete Inner Work System</title>
+<meta name="description" content="A 60-page guided journal combining shadow work, manifestation, nervous system reset, and guided grief healing into one system.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Baskerville&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F6F1E9;
+    --paper:#FBF8F2;
+    --charcoal:#241E1A;
+    --charcoal-2:#2B2621;
+    --ink:#3A322B;
+    --terracotta:#C17A5B;
+    --gold:#9C6B4F;
+    --plum:#8A6B85;
+    --sage:#7C8B6F;
+    --blue:#6E8CA6;
+    --line:#DED2BE;
+    --muted:#8C7A63;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Lora', Georgia, serif;
+    font-size:16px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 28px;}
+  h1,h2,h3{font-family:'GFS Baskerville', Georgia, serif; font-weight:400; color:var(--charcoal-2); letter-spacing:0.2px;}
+  .kicker{
+    font-family:'Poppins', sans-serif; font-size:11px; letter-spacing:3px; text-transform:uppercase;
+    color:var(--gold); font-weight:600;
+  }
+  .kicker.on-dark{color:#D3A98A;}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'Poppins', sans-serif; font-size:13.5px; letter-spacing:0.6px; font-weight:600;
+    text-decoration:none; text-transform:uppercase;
+    padding:16px 30px; border-radius:2px; transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .btn-primary{background:var(--terracotta); color:#FBF6EC;}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(193,122,91,0.35);}
+  .btn-ghost{background:transparent; color:var(--cream); border:1px solid rgba(246,241,233,0.4);}
+  .btn-ghost:hover{border-color:#fff;}
+
+  /* Signature spectrum bar — reappears as a divider between sections */
+  .spectrum{height:5px; width:100%; display:flex;}
+  .spectrum span{flex:1;}
+  .spectrum .s1{background:var(--plum);}
+  .spectrum .s2{background:var(--gold);}
+  .spectrum .s3{background:var(--sage);}
+  .spectrum .s4{background:var(--blue);}
+
+  /* ---------- Header ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    background:rgba(36,30,26,0.92); backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(246,241,233,0.08);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:18px 28px; max-width:1120px; margin:0 auto;}
+  .brand{font-family:'Poppins',sans-serif; font-size:12.5px; letter-spacing:2.5px; color:var(--cream); text-transform:uppercase;}
+  .nav .btn-primary{padding:11px 22px; font-size:12px;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:linear-gradient(175deg, var(--charcoal) 0%, #1E1915 100%);
+    color:var(--cream);
+    padding:170px 0 90px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{display:grid; grid-template-columns:1.05fr 0.95fr; gap:60px; align-items:center;}
+  .hero h1{font-size:48px; line-height:1.15; color:#FBF6EC; margin:20px 0 22px;}
+  .hero h1 em{font-style:italic; color:#D3A98A;}
+  .hero p.lede{font-size:16.5px; line-height:1.8; color:#D8CBB8; max-width:480px; margin-bottom:34px;}
+  .hero-ctas{display:flex; gap:16px; align-items:center; flex-wrap:wrap; margin-bottom:26px;}
+  .hero-meta{font-family:'Poppins',sans-serif; font-size:11.5px; letter-spacing:1px; color:#A9967D;}
+
+  .cover-mock{
+    position:relative; height:520px; display:flex; align-items:center; justify-content:center;
+  }
+  .cover-card{
+    width:300px; height:400px;
+    background:linear-gradient(160deg,#2B2420,#1E1915);
+    border:1px solid rgba(246,239,227,0.28);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:30px;
+    box-shadow:0 40px 80px rgba(0,0,0,0.45);
+    position:relative; z-index:3;
+  }
+  .cover-card .k{font-family:'Poppins',sans-serif; font-size:8.5px; letter-spacing:2.5px; color:#D3A98A; text-transform:uppercase; margin-bottom:16px;}
+  .cover-card h3{font-size:26px; color:#F8F1E4; line-height:1.2;}
+  .cover-card .rule{width:44px; height:1px; background:#D3A98A; margin:18px auto;}
+  .cover-card .sub{font-family:'Poppins',sans-serif; font-size:9px; color:#CBBFA9; letter-spacing:0.5px; line-height:2;}
+  .page-card{
+    position:absolute; width:230px; height:300px; background:var(--paper);
+    border:1px solid var(--line); padding:22px;
+    box-shadow:0 30px 60px rgba(0,0,0,0.35);
+  }
+  .page-card.pc1{right:6%; top:6%; transform:rotate(7deg); z-index:2;}
+  .page-card.pc2{left:2%; bottom:2%; transform:rotate(-8deg); z-index:1;}
+  .page-card .tag{display:inline-block; font-family:'Poppins',sans-serif; font-size:7.5px; letter-spacing:1.5px; text-transform:uppercase; color:#fff; background:var(--sage); padding:3px 8px; margin-bottom:10px;}
+  .page-card.pc2 .tag{background:var(--blue);}
+  .page-card .ln{border-bottom:1px solid #CDBFA9; height:14px; margin-bottom:8px;}
+  .page-card h4{font-size:13px; color:var(--charcoal-2); margin-bottom:10px;}
+
+  /* ---------- Section generic ---------- */
+  section{padding:90px 0;}
+  .section-head{max-width:640px; margin-bottom:56px;}
+  .section-head h2{font-size:34px; margin:14px 0 16px;}
+  .section-head p{color:var(--muted); font-size:15px;}
+
+  /* ---------- Reframe ---------- */
+  .reframe{background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .reframe .wrap{max-width:760px; text-align:center;}
+  .reframe blockquote{font-size:26px; line-height:1.5; color:var(--charcoal-2); font-style:italic; margin:22px 0;}
+  .reframe cite{font-family:'Poppins',sans-serif; font-size:11px; letter-spacing:1.5px; color:var(--muted); text-transform:uppercase; font-style:normal;}
+
+  /* ---------- Modules ---------- */
+  .modules-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:22px;}
+  .module-card{
+    background:var(--charcoal-2); color:var(--cream); padding:38px 34px; position:relative; overflow:hidden;
+    min-height:260px; display:flex; flex-direction:column; justify-content:flex-end;
+  }
+  .module-card .num{
+    position:absolute; top:22px; right:26px; font-family:'GFS Baskerville',serif; font-size:64px; opacity:0.16; line-height:1;
+  }
+  .module-card .k{font-family:'Poppins',sans-serif; font-size:10px; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px;}
+  .module-card h3{color:#FBF6EC; font-size:23px; margin-bottom:10px;}
+  .module-card p{font-size:13.5px; color:#DED2BE; line-height:1.65;}
+  .m1{background:linear-gradient(150deg,#4B3A49,#3A2C38);} .m1 .k{color:#E3C9DD;}
+  .m2{background:linear-gradient(150deg,#8A5A3E,#6E4530);} .m2 .k{color:#F1DFCB;}
+  .m3{background:linear-gradient(150deg,#4C5A42,#3A4633);} .m3 .k{color:#DCE7CE;}
+  .m4{background:linear-gradient(150deg,#3E5266,#2E4152);} .m4 .k{color:#CFE0EB;}
+
+  /* ---------- What's inside ---------- */
+  .inside{background:var(--charcoal); color:var(--cream);}
+  .inside .section-head h2{color:#FBF6EC;}
+  .inside .section-head p{color:#C9BBA3;}
+  .inside-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(246,241,233,0.14); border:1px solid rgba(246,241,233,0.14);}
+  .inside-item{background:var(--charcoal); padding:32px 28px;}
+  .inside-item .n{font-family:'GFS Baskerville',serif; font-size:34px; color:var(--terracotta); margin-bottom:10px;}
+  .inside-item h4{font-family:'Poppins',sans-serif; font-size:13px; letter-spacing:0.4px; color:#FBF6EC; margin-bottom:8px; font-weight:500;}
+  .inside-item p{font-size:13px; color:#B9AB93; line-height:1.6;}
+
+  /* ---------- Preview mockup ---------- */
+  .preview .wrap{display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:center;}
+  .worksheet-mock{background:var(--paper); border:1px solid var(--line); padding:40px 36px; box-shadow:0 30px 70px rgba(43,38,33,0.12);}
+  .worksheet-mock .k{font-family:'Poppins',sans-serif; font-size:9.5px; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:6px;}
+  .worksheet-mock h3{font-size:22px; margin-bottom:4px;}
+  .worksheet-mock .r{width:44px; height:2px; background:var(--terracotta); margin:14px 0 20px;}
+  .prompt-box{background:#F6F1E9; border-left:3px solid var(--terracotta); padding:12px 16px; font-size:12px; margin-bottom:12px; color:var(--gold); font-family:'Poppins',sans-serif; letter-spacing:0.3px;}
+  .ln2{border-bottom:1px solid #CDBFA9; height:22px; margin-bottom:6px;}
+
+  /* ---------- Who it's for ---------- */
+  .who ul{list-style:none;}
+  .who li{
+    display:flex; gap:16px; padding:22px 0; border-bottom:1px solid var(--line); font-size:15.5px;
+  }
+  .who li:first-child{border-top:1px solid var(--line);}
+  .who li .mark{font-family:'GFS Baskerville',serif; font-style:italic; color:var(--terracotta); font-size:20px; flex-shrink:0;}
+
+  /* ---------- Pricing ---------- */
+  .pricing{background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .price-card{
+    max-width:560px; margin:0 auto; background:var(--charcoal-2); color:var(--cream);
+    padding:52px 46px; text-align:center; position:relative;
+  }
+  .price-card .kicker{color:#D3A98A;}
+  .price-card h3{color:#FBF6EC; font-size:28px; margin:14px 0 20px;}
+  .price-row{display:flex; align-items:baseline; justify-content:center; gap:14px; margin-bottom:6px;}
+  .price-now{font-family:'GFS Baskerville',serif; font-size:52px; color:#FBF6EC;}
+  .price-was{font-family:'Poppins',sans-serif; font-size:16px; color:#9C8B71; text-decoration:line-through;}
+  .price-card .note{font-family:'Poppins',sans-serif; font-size:11px; letter-spacing:0.5px; color:#B9AB93; margin-bottom:30px;}
+  .price-list{text-align:left; margin:0 auto 34px; max-width:380px;}
+  .price-list li{list-style:none; display:flex; gap:12px; font-size:13.5px; color:#DED2BE; padding:7px 0;}
+  .price-list li:before{content:"—"; color:var(--terracotta);}
+  .price-card .btn-primary{width:100%; justify-content:center; padding:18px;}
+  .price-fine{font-family:'Poppins',sans-serif; font-size:10.5px; color:#8C7A63; margin-top:16px; letter-spacing:0.3px;}
+
+  /* ---------- FAQ ---------- */
+  .faq-item{border-bottom:1px solid var(--line); padding:26px 0;}
+  .faq-item h4{font-family:'Poppins',sans-serif; font-weight:500; font-size:15px; color:var(--charcoal-2); margin-bottom:8px;}
+  .faq-item p{font-size:14px; color:var(--muted);}
+
+  /* ---------- Email capture ---------- */
+  .capture{background:var(--charcoal); color:var(--cream);}
+  .capture .wrap{max-width:640px; text-align:center;}
+  .capture h2{color:#FBF6EC; font-size:30px; margin:14px 0 12px;}
+  .capture p{color:#C9BBA3; font-size:14.5px; margin-bottom:34px;}
+  #mc-form{display:flex; gap:10px; max-width:460px; margin:0 auto; flex-wrap:wrap; justify-content:center;}
+  #mc-form input[type=email]{
+    flex:1; min-width:240px; padding:15px 18px; background:transparent; border:1px solid rgba(246,241,233,0.35);
+    color:var(--cream); font-family:'Poppins',sans-serif; font-size:13.5px; border-radius:2px;
+  }
+  #mc-form input[type=email]::placeholder{color:#9C8B71;}
+  #mc-form input[type=email]:focus{outline:2px solid var(--terracotta); outline-offset:2px;}
+  #mc-form button{
+    font-family:'Poppins',sans-serif; font-size:13px; letter-spacing:0.5px; font-weight:600; text-transform:uppercase;
+    background:var(--terracotta); color:#FBF6EC; border:none; padding:15px 26px; cursor:pointer; border-radius:2px;
+    transition:transform .15s ease;
+  }
+  #mc-form button:hover{transform:translateY(-2px);}
+  #mc-form button:disabled{opacity:0.6; cursor:default; transform:none;}
+  #mc-msg{margin-top:16px; font-family:'Poppins',sans-serif; font-size:12.5px; min-height:18px;}
+  #mc-msg.ok{color:#B7D0A0;}
+  #mc-msg.err{color:#E6A487;}
+  .capture .fine{font-family:'Poppins',sans-serif; font-size:10px; color:#7A6E5C; margin-top:18px; letter-spacing:0.3px;}
+
+  /* ---------- Footer ---------- */
+  footer{background:#1E1915; color:#8C7A63; padding:44px 0; text-align:center;}
+  footer .brand{color:#C9BBA3; margin-bottom:8px;}
+  footer p{font-family:'Poppins',sans-serif; font-size:11px; letter-spacing:0.5px;}
+
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr; text-align:left;}
+    .cover-mock{height:400px; margin-top:20px;}
+    .hero h1{font-size:36px;}
+    .modules-grid{grid-template-columns:1fr;}
+    .inside-grid{grid-template-columns:1fr 1fr;}
+    .preview .wrap{grid-template-columns:1fr;}
+    .price-card{padding:38px 24px;}
+    #mc-form{flex-direction:column;}
+    #mc-form button{width:100%;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">Vinyan Studio</div>
+    <a class="btn btn-primary" href="https://vinyan.gumroad.com/l/dpoalh" target="_blank" rel="noopener">Get The Journal — $77</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker on-dark">A Complete Inner Work System</div>
+      <h1>Four kinds of healing<br> don't happen <em>one at a time.</em><br>This journal doesn't<br>pretend they do.</h1>
+      <p class="lede">60 guided pages combining shadow work, manifestation, nervous system repair, and grief healing into a single system — because real seasons of life ask for all four at once.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://vinyan.gumroad.com/l/dpoalh" target="_blank" rel="noopener">Get Instant Access — $77</a>
+        <a class="btn btn-ghost" href="#inside">See what's inside</a>
+      </div>
+      <div class="hero-meta">Instant PDF download · Print or use digitally · 60 pages</div>
+    </div>
+    <div class="cover-mock">
+      <div class="cover-card">
+        <div class="k">A Complete Inner Work System</div>
+        <h3>The Wholehearted<br>Journal</h3>
+        <div class="rule"></div>
+        <div class="sub">Shadow Work · Manifestation<br>Nervous System Reset · Grief</div>
+      </div>
+      <div class="page-card pc1">
+        <span class="tag">Module Three</span>
+        <h4>Energy Audit</h4>
+        <div class="ln"></div><div class="ln"></div><div class="ln" style="width:70%"></div>
+      </div>
+      <div class="page-card pc2">
+        <span class="tag">Module One</span>
+        <h4>Mapping Your Triggers</h4>
+        <div class="ln"></div><div class="ln"></div><div class="ln" style="width:60%"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="spectrum"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>
+
+<section class="reframe">
+  <div class="wrap">
+    <div class="kicker">The Reframe</div>
+    <blockquote>"The part of you doing shadow work is the same part trying to set a goal. The nervous system that's burnt out is the same one trying to grieve."</blockquote>
+    <cite>From the welcome letter, page 3</cite>
+  </div>
+</section>
+
+<section id="modules">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Four Modules, One Thread</div>
+      <h2>Everything a season of change actually requires</h2>
+      <p>Most journals give you one lens. This one gives you four — sequenced so each module builds on real self-knowledge from the last, but built to be used in whatever order your week calls for.</p>
+    </div>
+    <div class="modules-grid">
+      <div class="module-card m1">
+        <div class="num">01</div>
+        <div class="k">Module One</div>
+        <h3>Shadow Work &amp; Self-Discovery</h3>
+        <p>Map your triggers, meet your inner child, and excavate the beliefs quietly running the show.</p>
+      </div>
+      <div class="module-card m2">
+        <div class="num">02</div>
+        <div class="k">Module Two</div>
+        <h3>Manifestation &amp; Goal-Setting</h3>
+        <p>Get honest about what you actually want, then build a real 90-day plan to move toward it.</p>
+      </div>
+      <div class="module-card m3">
+        <div class="num">03</div>
+        <div class="k">Module Three</div>
+        <h3>Nervous System Reset</h3>
+        <p>Recognize burnout, audit your energy, and build a toolkit for real recovery — not just rest days.</p>
+      </div>
+      <div class="module-card m4">
+        <div class="num">04</div>
+        <div class="k">Module Four</div>
+        <h3>Guided Grief &amp; Healing</h3>
+        <p>Space to grieve any loss — a person, a relationship, a future — without a deadline attached.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="inside" id="inside">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker on-dark">What's Inside</div>
+      <h2>60 pages, built to be lived in</h2>
+      <p>Not filler pages. Every worksheet, tracker, and prompt was written for this system specifically.</p>
+    </div>
+  </div>
+  <div class="wrap" style="padding:0 28px;">
+  <div class="inside-grid">
+    <div class="inside-item"><div class="n">30+</div><h4>Unique guided prompts</h4><p>Across all four modules, from trigger-mapping to letters to what was lost.</p></div>
+    <div class="inside-item"><div class="n">08</div><h4>Foundational pages</h4><p>Wheel of Life assessment and intention-setting before you dive into any module.</p></div>
+    <div class="inside-item"><div class="n">12+</div><h4>Trackers &amp; worksheets</h4><p>90-day goal tracker, energy audits, boundary worksheets, weekly logs.</p></div>
+    <div class="inside-item"><div class="n">06</div><h4>Undated daily pages</h4><p>Morning intention, gratitude, nervous system check-in, evening reflection.</p></div>
+    <div class="inside-item"><div class="n">05</div><h4>Weekly &amp; monthly spreads</h4><p>Reusable templates so this becomes a practice, not a one-time read.</p></div>
+    <div class="inside-item"><div class="n">01</div><h4>Single PDF file</h4><p>Print at home, or load into GoodNotes / Notability on any tablet.</p></div>
+  </div>
+  </div>
+</section>
+
+<section class="preview">
+  <div class="wrap">
+    <div class="worksheet-mock">
+      <div class="k">Module One · Inner Child</div>
+      <h3>Meeting Your Inner Child</h3>
+      <div class="r"></div>
+      <div class="prompt-box">WHAT DID THAT CHILD NEED MORE OF?</div>
+      <div class="ln2"></div><div class="ln2"></div>
+      <div class="prompt-box">IF I COULD SAY ONE THING TO THAT VERSION OF ME RIGHT NOW...</div>
+      <div class="ln2"></div><div class="ln2"></div>
+    </div>
+    <div>
+      <div class="kicker">Inside A Page</div>
+      <h2 style="font-size:30px; margin:14px 0 18px;">Prompts that go somewhere</h2>
+      <p style="color:var(--muted); font-size:15px; margin-bottom:20px;">Every worksheet is designed to move you from a vague feeling to a specific, actionable insight — with enough structure to make writing easy, and enough space to make it honest.</p>
+      <p style="color:var(--muted); font-size:15px;">No generic "how are you feeling today?" prompts. Every page in this journal was written for one of the four modules specifically, building toward the reflection at the end of each section.</p>
+    </div>
+  </div>
+</section>
+
+<div class="spectrum"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>
+
+<section class="who">
+  <div class="wrap" style="max-width:760px;">
+    <div class="section-head" style="margin-bottom:30px;">
+      <div class="kicker">Who This Is For</div>
+      <h2>You'll probably recognize yourself here</h2>
+    </div>
+    <ul>
+      <li><span class="mark">—</span><span>People doing real inner work, tired of piecing together five different journals and courses to cover it.</span></li>
+      <li><span class="mark">—</span><span>Therapy-goers who want something structured to use between sessions.</span></li>
+      <li><span class="mark">—</span><span>Anyone in a season that involves ambition, burnout, and grief all at once — which, honestly, is most seasons.</span></li>
+      <li><span class="mark">—</span><span>Anyone who's tried a 7-day journal challenge before and needs something built to actually last.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="price-card">
+      <div class="kicker">Instant Digital Download</div>
+      <h3>The Wholehearted Journal</h3>
+      <div class="price-row">
+        <span class="price-now">$77</span>
+        <span class="price-was">$147</span>
+      </div>
+      <div class="note">One-time payment · Four journals, one system</div>
+      <ul class="price-list">
+        <li>60-page professionally designed PDF</li>
+        <li>4 in-depth modules, 30+ guided prompts</li>
+        <li>Weekly &amp; monthly tracking templates</li>
+        <li>6 reusable undated daily practice pages</li>
+        <li>Works printed or on any tablet</li>
+      </ul>
+      <a class="btn btn-primary" href="https://vinyan.gumroad.com/l/dpoalh" target="_blank" rel="noopener">Get Instant Access</a>
+      <div class="price-fine">Secure checkout via Gumroad · Delivered immediately after purchase</div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap" style="max-width:760px;">
+    <div class="section-head" style="margin-bottom:10px;">
+      <div class="kicker">Questions</div>
+      <h2>Before you go</h2>
+    </div>
+    <div class="faq-item">
+      <h4>Is this a physical journal?</h4>
+      <p>No — it's a digital PDF you download instantly after purchase. Print it at home, use a print-on-demand service, or write directly on it with a tablet and stylus app like GoodNotes or Notability.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do I need to go through the modules in order?</h4>
+      <p>No. Many people work front to back over about 90 days; others jump to whichever module matches the week they're having. Both are the intended way to use it.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Is this a replacement for therapy?</h4>
+      <p>No. It's a self-reflection tool meant to support work you're already doing — on your own or alongside a therapist — not a clinical substitute. If you're in crisis, please reach out to a mental health professional or crisis line.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What size are the pages?</h4>
+      <p>Standard US Letter (8.5" x 11"), formatted to print cleanly or fill in digitally at full resolution.</p>
+    </div>
+  </div>
+</section>
+
+<section class="capture">
+  <div class="wrap">
+    <div class="kicker on-dark">Not Ready To Buy Yet?</div>
+    <h2>Get a free 5-page preview</h2>
+    <p>See the welcome letter, table of contents, and one full worksheet before you decide. No spam — just the preview and an occasional note when something new launches.</p>
+    <form id="mc-form" onsubmit="return submitToMailchimp(event)">
+      <input type="email" id="mc-email" name="EMAIL" placeholder="you@email.com" required>
+      <button type="submit" id="mc-submit">Send Me The Preview</button>
+    </form>
+    <div id="mc-msg" role="status" aria-live="polite"></div>
+    <div class="fine">By subscribing you agree to receive emails from Vinyan Studio. Unsubscribe anytime.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand" style="font-family:'Poppins',sans-serif; font-size:12px; letter-spacing:2px; text-transform:uppercase;">Vinyan Studio</div>
+  <p>© 2026 Vinyan Studio · The Wholehearted Journal</p>
+</footer>
+
+<script>
+  // ---- Mailchimp email capture via JSONP (no jQuery / mc-validate.js dependency, no CORS errors) ----
+  var MC_U = '4fa9a703dea7a674bf0c03433';
+  var MC_ID = '50a1711ab6';
+  var MC_FID = '00b1b0e6f0';
+  var MC_HOST = 'https://gmail.us18.list-manage.com/subscribe/post-json';
+
+  var mcCallbackCounter = 0;
+
+  function submitToMailchimp(e){
+    e.preventDefault();
+    var emailInput = document.getElementById('mc-email');
+    var msg = document.getElementById('mc-msg');
+    var btn = document.getElementById('mc-submit');
+    var email = emailInput.value.trim();
+
+    msg.className = '';
+    msg.textContent = '';
+
+    if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+      msg.className = 'err';
+      msg.textContent = 'Please enter a valid email address.';
+      return false;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    var cbName = 'mcJsonpCallback_' + (mcCallbackCounter++);
+    var timeoutId;
+
+    window[cbName] = function(data){
+      clearTimeout(timeoutId);
+      cleanup();
+      btn.disabled = false;
+      btn.textContent = 'Send Me The Preview';
+      if(data && data.result === 'success'){
+        msg.className = 'ok';
+        msg.textContent = "You're in! Check your inbox for the preview.";
+        emailInput.value = '';
+      } else {
+        var m = (data && data.msg) ? data.msg.replace(/<[^>]*>/g,'') : 'Something went wrong. Please try again.';
+        // Mailchimp reports "already subscribed" as an error — treat it kindly
+        if(/already subscribed/i.test(m)){
+          msg.className = 'ok';
+          msg.textContent = "You're already on the list — the preview is on its way.";
+        } else {
+          msg.className = 'err';
+          msg.textContent = m;
+        }
+      }
+    };
+
+    function cleanup(){
+      var s = document.getElementById(cbName + '_script');
+      if(s && s.parentNode){ s.parentNode.removeChild(s); }
+      try { delete window[cbName]; } catch(err){ window[cbName] = undefined; }
+    }
+
+    timeoutId = setTimeout(function(){
+      cleanup();
+      btn.disabled = false;
+      btn.textContent = 'Send Me The Preview';
+      msg.className = 'err';
+      msg.textContent = 'The request timed out. Please try again.';
+    }, 10000);
+
+    var url = MC_HOST
+      + '?u=' + encodeURIComponent(MC_U)
+      + '&id=' + encodeURIComponent(MC_ID)
+      + '&f_id=' + encodeURIComponent(MC_FID)
+      + '&EMAIL=' + encodeURIComponent(email)
+      + '&c=' + cbName;
+
+    var script = document.createElement('script');
+    script.id = cbName + '_script';
+    script.src = url;
+    script.onerror = function(){
+      clearTimeout(timeoutId);
+      cleanup();
+      btn.disabled = false;
+      btn.textContent = 'Send Me The Preview';
+      msg.className = 'err';
+      msg.textContent = 'Could not reach the signup service. Please try again in a moment.';
+    };
+    document.body.appendChild(script);
+    return false;
+  }
+</script>
+
+</body>
+</html>
